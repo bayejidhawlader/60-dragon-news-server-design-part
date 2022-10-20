@@ -1,0 +1,22 @@
+import React from "react";
+import { Carousel } from "react-bootstrap";
+import Brand1 from "../../../src/assets/brands/Brand1.png";
+import Brand2 from "../../../src/assets/brands/Brand2.png";
+
+const BrandCarousel = () => {
+  return (
+    <div>
+      <Carousel>
+        <Carousel.Item>
+          <img className="d-block w-100" src={Brand1} alt="First slide" />
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <img className="d-block w-100" src={Brand2} alt="Third slide" />
+        </Carousel.Item>
+      </Carousel>
+    </div>
+  );
+};
+
+export default BrandCarousel;
