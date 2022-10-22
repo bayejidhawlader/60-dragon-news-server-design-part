@@ -5,7 +5,7 @@ import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
 import RightSideNav from "../Shared/RightSideNav/RightSideNav";
 import Header from "../Shared/Header/Header";
 import Footer from "../Shared/Footer/Footer";
-import BrandCarousel from "../Shared/BrandCarousel/BrandCarousel";
+// import BrandCarousel from "../Shared/BrandCarousel/BrandCarousel";
 
 const Main = () => {
   return (
@@ -21,7 +21,7 @@ const Main = () => {
           </Col>
           <Col lg="3">
             <RightSideNav></RightSideNav>
-            <BrandCarousel></BrandCarousel>
+            {/* <BrandCarousel></BrandCarousel> */}
           </Col>
         </Row>
       </Container>

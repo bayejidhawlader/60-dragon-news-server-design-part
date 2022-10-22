@@ -1,4 +1,5 @@
-import React from "react";
+import { GoogleAuthProvider } from "firebase/auth";
+import React, { useContext } from "react";
 import { Button, ButtonGroup, ListGroup } from "react-bootstrap";
 import {
   FaFacebook,
@@ -9,13 +10,28 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
+import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 
 const RightSideNav = () => {
+  const { providerLogin } = useContext(AuthContext);
+  const googleProvider = new GoogleAuthProvider();
+  const handleGoogleSingIn = () => {
+    providerLogin(googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.log(error));
+  };
   return (
     <div>
       <div>
         <ButtonGroup vertical>
-          <Button className="my-2" variant="outline-primary">
+          <Button
+            onClick={handleGoogleSingIn}
+            className="my-2"
+            variant="outline-primary"
+          >
             <FaGoogle></FaGoogle> Login with Google
           </Button>
           <Button variant="outline-dark">
