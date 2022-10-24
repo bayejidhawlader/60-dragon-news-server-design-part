@@ -1,1 +1,1 @@
-[Create React App](https://60-dragon-news-server-design-part.netlify.app/).
+[Create React App](https://dragon-news-f5580.web.app/).
